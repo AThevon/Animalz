@@ -1,0 +1,33 @@
+.loading-bar {
+    position: relative;
+    margin-top: 8rem;
+    width: 36rem;
+    height: .7rem;
+    background-color: #3f3f46;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.loading-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8rem;
+    height: 100%;
+    background-color: #e5e7eb;
+    border-radius: 25px;
+    animation: loading 1.3s linear infinite;
+}
+
+
+@keyframes loading {
+    0%, 100% {
+        transform: translateX(-100%);
+        width: 8rem;
+    }
+    40% {
+        transform: translateX(400%);
+        width: 12rem;
+    }
+}
